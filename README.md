@@ -1,4 +1,4 @@
-# TareaDise-o-INFO290
+# TareaDise-o-INFO145
 
 Integrantes:
     - Andrés Galaz
