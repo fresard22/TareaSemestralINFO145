@@ -1,4 +1,4 @@
-# TareaDiseño-INFO145 2024
+# Tarea Diseño y Análisis de Algoritmos - INFO145-2024
 
 Integrantes:
     - Andrés Galaz
