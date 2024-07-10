@@ -1,7 +1,7 @@
-# TareaDise-o-INFO290
+# TareaDiseño-INFO145 2024
 
 Integrantes:
     - Andrés Galaz
-    - Fabrizio Fressard
+    - Fabrizio Fresard
     - Jhonatan Friz
-    - Juan Lopez
+    - Juan Lopez 
