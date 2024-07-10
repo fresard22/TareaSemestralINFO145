@@ -33,12 +33,12 @@ int main() {
     chrono::nanoseconds tiempoLineal = medirTiempoBusquedaBinaria(arregloNumeros, TAM, elementoABuscar, posicionLineal);
 
     //Mostrar resultado de búsqueda binaria y tiempo
-    if (posicionLineal != -1) {
+    /*if (posicionLineal != -1) {
       cout << "Elemento encontrado en el arreglo lineal en la posición " << posicionLineal << "." << endl;
     } else {
       cout << "Elemento no encontrado en el arreglo lineal." << endl;
     }
-    cout << "Tiempo de búsqueda lineal: " << tiempoLineal.count() << " nanosegundos" << endl;
+    cout << "Tiempo de búsqueda lineal: " << tiempoLineal.count() << " nanosegundos" << endl;*/
 
     //Generar números arreglo normal
     generarArregloNormal(arregloNumeros, TAM, 500000, 100000);
@@ -48,14 +48,14 @@ int main() {
     chrono::nanoseconds tiempoNormal = medirTiempoBusquedaBinaria(arregloNumeros, TAM, elementoABuscar, posicionNormal);
 
     //Mostrar resultado y tiempo de arreglo normal
-    if (posicionNormal != -1) {
+    /*if (posicionNormal != -1) {
       cout << "Elemento encontrado en el arreglo normal en la posición " << posicionNormal << "." << endl;
     } else {
       cout << "Elemento no encontrado en el arreglo normal." << endl;
-    }
+    }*/
 
     //Agregamos resultados al archivo CSV
-    cout << "Tiempo de búsqueda normal: " << tiempoNormal.count() << " nanosegundos" << endl;
+    //cout << "Tiempo de búsqueda normal: " << tiempoNormal.count() << " nanosegundos" << endl;
     long memoriaKB = obtenerUsoMemoriaKB();
     cout << "Uso de memoria (KB): " << memoriaKB << endl;
     outFile << i << "," << tiempoLineal.count() << "," << tiempoNormal.count() << endl;

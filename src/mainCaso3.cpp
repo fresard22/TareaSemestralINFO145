@@ -34,19 +34,22 @@ int main() {
         cout << simbolo.numero << " (frecuencias: " << simbolo.frecuencias << "): " 
              << codigos[simbolo.numero] << endl;
     }
-
+    string elementoABuscar;
     string encodedArray[TAM];
     for (int i = 0; i < TAM; ++i) {
         encodedArray[i] = codigos[arregloNumeros[i]];
+        if (i==TAM/2){
+            elementoABuscar=codigos[arregloNumeros[i]];
+        }
     }
     
-    cout << "\nArreglo codificado Shannon-Fano:\n";
+    std::cout << "Arreglo codificado Shannon-Fano: " << endl;
     for (int i = 0; i < TAM; ++i) {
         std::cout << encodedArray[i] << " ";
     }
-    std::cout << std::endl;
 
-    int elementoABuscar;
+    cout << "Elemento codificado a buscar: " << elementoABuscar << endl;
+
     long memoriaKB = obtenerUsoMemoriaKB();
     cout << "Uso de memoria (KB): " << memoriaKB << endl;
 
