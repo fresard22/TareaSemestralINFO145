@@ -4,7 +4,7 @@
 #include <cmath>
 
 // Tamaño del arreglo
-const int TAM =pow(2,20);
+const int TAM =10000;
 const int m =log2(TAM);
 const int b = TAM/m;
 

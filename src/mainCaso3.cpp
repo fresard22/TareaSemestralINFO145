@@ -47,11 +47,6 @@ int main() {
     std::cout << std::endl;
 
     int elementoABuscar;
-    random_device rd;
-    mt19937 gen(rd());
-    uniform_int_distribution<int> dis(1, INT_MAX);
-    elementoABuscar = dis(gen);
-    cout << "Elemento a buscar: " << elementoABuscar << endl;
     long memoriaKB = obtenerUsoMemoriaKB();
     cout << "Uso de memoria (KB): " << memoriaKB << endl;
 
