@@ -2,8 +2,8 @@
 #include <random>
 #include <climits>
 
-
 const int epsilon=255;
+
 
 
 // Función para generar un arreglo con distribución lineal aleatoria
@@ -34,4 +34,23 @@ void generarArregloNormal(int vector[], int tam, double media, double desviacion
         
         vector[i] = (int)(round(aleatorio));
     }
+}
+
+void gapEncode(int arr[], int tamaño) {
+  if (tamaño<=1) {
+  }
+  int anterior = arr[0];
+  for (int i = 1; i <= tamaño; i++) {
+    int gap = arr[i] - anterior;
+    anterior = arr[i];
+    arr[i]=gap;
+  }
+}
+
+void generarSample(int arreglo[], int sample[], int tamaño, int b){
+
+  for (int i = 0; i < m; ++i) {
+    // Añadir al sample el elemento de índice 2*i (elementos pares)
+    sample[i]=arreglo[b*i];
+  }
 }
