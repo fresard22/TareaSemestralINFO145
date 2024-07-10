@@ -56,6 +56,8 @@ int main() {
 
     //Agregamos resultados al archivo CSV
     cout << "Tiempo de búsqueda normal: " << tiempoNormal.count() << " nanosegundos" << endl;
+    long memoriaKB = obtenerUsoMemoriaKB();
+    cout << "Uso de memoria (KB): " << memoriaKB << endl;
     outFile << i << "," << tiempoLineal.count() << "," << tiempoNormal.count() << endl;
   }
   //Cerramos archivo CSV

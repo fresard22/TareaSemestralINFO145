@@ -1,6 +1,8 @@
 #include "../include/genera.h"
 #include <random>
 #include <climits>
+#include <sys/resource.h>
+#include <unistd.h>
 
 const int epsilon=255;
 
@@ -53,4 +55,10 @@ void generarSample(int arreglo[], int sample[], int tamaño, int b){
     // Añadir al sample el elemento de índice 2*i (elementos pares)
     sample[i]=arreglo[b*i];
   }
+}
+
+long obtenerUsoMemoriaKB() {
+    struct rusage rusage;
+    getrusage(RUSAGE_SELF, &rusage);
+    return rusage.ru_maxrss; // ru_maxrss está en kilobytes
 }

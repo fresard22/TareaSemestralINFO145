@@ -12,11 +12,11 @@ using namespace std;
 
 
 int main() {
-  ofstream outFile("/home/fabrizio/Escritorio/DAA/TareaSemestral/TareaINFO-290-main-C++Modularizado/resultados/Resultados_GapEncoded10e6.csv");
+  ofstream outFile("/home/fabrizio/Escritorio/DAA/TareaSemestral/TareaINFO-290-main-C++Modularizado/resultados/Resultados_GapEncoded2e20csv");
   outFile << "Iteración,Tiempo Lineal (ns),Tiempo Normal (ns)" << endl;
-  for (int i = 0; i < 150; i++)
+  for (int i = 0; i < 50; i++)
   {
-    int elementoABuscar=7;
+    int elementoABuscar;
     random_device rd;
     mt19937 gen(rd());
     uniform_int_distribution<int> dis(1, INT_MAX);
@@ -70,6 +70,8 @@ int main() {
     //Mostrar resultado y tiempo de arreglo normal
     cout << "Tiempo de búsqueda normal: " << tiempoNormal.count() << " nanosegundos" << endl;
     outFile << i << "," << tiempoLineal.count() << "," << tiempoNormal.count() << endl;
+    long memoriaKB = obtenerUsoMemoriaKB();
+    cout << "Uso de memoria (KB): " << memoriaKB << endl;
   }
   outFile.close();
   return 0;
